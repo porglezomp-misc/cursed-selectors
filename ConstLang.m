@@ -1,7 +1,5 @@
-@import Foundation;
-
-#import <objc/runtime.h>
 #import "ConstLang.h"
+#import <objc/runtime.h>
 
 @implementation ConstLang
 
