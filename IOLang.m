@@ -7,13 +7,13 @@
     IoState *ioState;
 }
 
--(instancetype)init {
+- (instancetype)init {
     self->ioState = IoState_new();
     IoState_init(self->ioState);
     return self;
 }
 
--(void)deinit {
+- (void)deinit {
     IoState_free(self->ioState);
     self->ioState = nil;
 }
@@ -22,7 +22,7 @@
     return [NSMethodSignature signatureWithObjCTypes:"v@:"];
 }
 
--(void)forwardInvocation:(NSInvocation *)invocation {
+- (void)forwardInvocation:(NSInvocation *)invocation {
     const char *code = sel_getName(invocation.selector);
     NSLog(@"%s\n", code);
     IoState_doCString_(self->ioState, code);

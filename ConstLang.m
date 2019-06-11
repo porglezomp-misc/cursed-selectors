@@ -12,9 +12,7 @@
     if ((value == 0 && rest == name) || *rest != '\0') {
         return NO;
     }
-    IMP impl = imp_implementationWithBlock(^(id self) {
-        return value;
-    });
+    IMP impl = imp_implementationWithBlock(^(id self) { return value; });
     class_addMethod(self, sel_registerName(name), impl, "i@:");
     return YES;
 }

@@ -1,0 +1,6 @@
+IndentWidth: 4
+ContinuationIndentWidth: 4
+AlignAfterOpenBracket: DontAlign
+ColumnLimit: 99
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
