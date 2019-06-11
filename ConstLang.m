@@ -7,6 +7,7 @@
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     const char *name = sel_getName(sel);
+    NSLog(@"Generating method for selector '%s'\n", name);
     char *rest;
     int value = strtol(name, &rest, 10);
     // Must have parsed something, or have content left in buffer
